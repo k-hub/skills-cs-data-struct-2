@@ -1,0 +1,75 @@
+Recursion
+
+1. In your own words, what is Recursion?
+    Recursion is when a function calls itself. The data structure is a stack.
+In recursion, there is a Base Case, which is the condition the function eventually meets
+in order to stop calling itself. Once the base case is met, each time the function was called,
+something needs to be returned to close each out the current call stack until finally it
+reaches the outermost "layer" of the function and finishes executing. 
+
+2. Why is it necessary to have a Base Case?
+    It is necessary to have a Base Case otherwise the recursion never stops. The function will
+keep calling itself. 
+
+--------------
+Graphs
+
+1. What is a Graph?
+    Graphs are like trees but they have loops and they show relationships between things.
+
+2. How is a Graph different from a Tree?
+    Trees are directed, have hierchy, and acyclic. Graphs can be directed or non-directed,
+don't have hierachy, and can be acyclic or cyclic. Graphs are usually used to show relationships between things.
+
+3. Give an example of something that would be good to model with a Graph.
+    A family tree.
+
+--------------
+Performance of Different Data Structures
+
+
+Data Structure                  Index   Search     Add-R          Add-L   Pop-L   Pop-R
+Python List(Array)               O(1)    O(n)      O(1)           O(n)    O(n)     O(1)
+Linked List                      O(n)    O(n)   w/ tail: O(1)     O(1)    O(1)     O(n)
+                                                w/o tail: O(n)    
+Doubly-Linked List               O(n)    O(n)   w/ tail: O(1)     O(1)    O(1)     O(1)
+                                                w/o tail: O(n)
+Queue (as Array)                    X       X       O(1)             X    O(n)      X
+Queue (as LL or DLL)                X       X       O(1)             X    O(1)      X
+Stack (as Array, LL, or DLL)        X       X       O(1)             X      X      O(1)
+Deque (as DLL)                      X       X       O(1)          O(1)    O(1)     O(1)
+
+
+
+
+Data Structure          Get       Add    Delete  Iterate   Memory
+Dictionary (Hash Map)   O(1)      O(1)    O(1)    O(n)     medium
+Set (Hash Map)          O(1)      O(1)    O(1)    O(n)     medium
+Binary Search Tree      O(log n)  O(n)    O(n)    O(1)     small                
+Tree                    O(n)      O(1)    O(1)    O(1)     small
+
+--------------
+Sorting
+
+1. Describe in words how the Bubble Sort algorithm works.
+    Bubble sort compares one item to the next item and then they swap places if item one is greater than item two.
+It does this until it reaches the end of the list. Then iterates again until the second largest number is second from the end of the list. This loop continues until all numbers are ordered. So numbers are ordered from smallest to greatest. Bubble sort has a runtime of O(n^2).
+
+2. Describe in words how the Merge Sort algorithm works.
+    Merge sort uses recursion to listify all items in a list because a list of one item is already sorted. Then it
+compares the first element of a list to another list. The smallest number in the comparison is appended to a new list. This loop continues until both lists are empty. The runtime is O(n log n).
+
+3. Describe in words how the Quick Sort algorithm works.
+    Quick sort uses a pivot, pivot divider, and recursion. The pivot is the item that every item in a list 
+is compared to. If an item is less than the pivot, it is moved to the left of the pivot divider. If the item is greater than the pivot, the item stays in place. Once the pivot is reached in the iteration, the pivot is placed next to the pivot divider. Then in the next iteration, a new pivot is defined and the same pattern is repeated until the list is sorted. The runtime is O(n log n).
+
+
+--------------
+Git Branching
+
+1. Give an instance when you would use git branching.
+    When you are testing an idea and don't want to merge it to the main branch yet.
+
+2. What is a pull request?
+    This GitHub-specific feature is how you contribute code. You can create a new pull request with the work you
+have commited and the branch owner can review that work to decide if your work should be merged into the main branch.
